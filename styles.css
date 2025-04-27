@@ -79,6 +79,7 @@ a:hover {
 
 .btn-primary:hover {
   background-color: var(--secondary);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -256,24 +257,58 @@ a:hover {
 /* About Section */
 .about-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .about-text {
-  flex: 1;
+  flex: 1 1 60%; /* Take up more width */
+  min-width: 300px;
 }
 
 .about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  flex: 1 1 35%; /* Take up less width */
+  min-width: 300px;
+  max-width: 400px; /* Limit maximum width */
+  position: relative;
+  height: 350px; /* Fixed height */
+  margin-top: 1rem; /* Align with text */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 1rem;
 }
 
 .stats {
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .stat-item {

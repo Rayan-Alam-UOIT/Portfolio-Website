@@ -84,4 +84,24 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
     });
   });
+
+   // Slideshow functionality
+   const slides = document.querySelectorAll('.slide');
+   let currentSlide = 0;
+   
+   function showSlide(index) {
+     slides.forEach(slide => slide.classList.remove('active'));
+     slides[index].classList.add('active');
+   }
+   
+   function nextSlide() {
+     currentSlide = (currentSlide + 1) % slides.length;
+     showSlide(currentSlide);
+   }
+   
+   // Start the slideshow
+   if (slides.length > 0) {
+     showSlide(0);
+     setInterval(nextSlide, 3000); // Change slide every 3 seconds
+   }
 });
