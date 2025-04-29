@@ -102,6 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
    // Start the slideshow
    if (slides.length > 0) {
      showSlide(0);
-     setInterval(nextSlide, 3000); // Change slide every 3 seconds
+     setInterval(nextSlide, 2500); // Change slide every 3 seconds
    }
 });
