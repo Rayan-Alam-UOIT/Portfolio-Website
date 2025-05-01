@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rayan Alam | Computer Science Student & Developer</title>
+  <title>Rayan Alam</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -31,7 +32,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Rayan Alam</h1>
-        <h2>Computer Science Student | Developer | Designer</h2>
+        <h2 id="typewriter-text"></h2>
         <p>Building innovative solutions at Ontario Tech University</p>
         <div class="cta-buttons">
           <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -49,8 +50,8 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>I'm a highly ambitious and hard-working computer science student at Ontario Tech University, having recently finished my second year with a cumulative GPA of 4.10 out of 4.30. I'm passionate about creating impactful software solutions and currently seeking co-op opportunities to apply my skills in real-world scenarios.</p>
-          <p>A bit about my background — I was born and raised in Canada, while my parents are originally from Pakistan, with roots that trace across South Asia and the Middle East. In my free time, I enjoy playing sports, especially basketball, soccer, and badminton. I'm also an anime fan, with Vinland Saga and Bleach being two of my favourites. Occasionally, I like to unwind by playing video games on my Xbox.</p>
+          <p>I'm a highly ambitious and hard-working computer science student at Ontario Tech University, having recently finished my second year with a cumulative GPA of 4.10 out of 4.30. I plan to specialize in Data Science and pursue a minor in Mathematics or Physics. I'm passionate about creating impactful software solutions and currently seeking co-op opportunities to apply my skills in real-world scenarios.</p>
+          <p>A bit about my background — I was born and raised in Canada, while my parents are originally from Pakistan, with roots that trace across South Asia and the Middle East. In my free time, I enjoy playing and watching sports, especially basketball, soccer, and badminton. I'm also an anime fan, with Vinland Saga and Bleach being two of my favourites. Occasionally, I like to unwind by playing video games on my Xbox.</p>
           <p>When I'm not coding, you can find me contributing to open-source projects, learning new technologies, and getting involved in university clubs and events including the MSA, PSA, CS Club, and HackHive hackathons.</p>
           <div class="stats">
             <div class="stat-item">
@@ -166,14 +167,6 @@
             <span class="skill-level expert">Expert</span>
           </li>
           <li>
-            <span class="skill-name">Figma</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Overleaf</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
             <span class="skill-name">Visual Studio Code</span>
             <span class="skill-level expert">Expert</span>
           </li>
@@ -182,11 +175,27 @@
             <span class="skill-level expert">Expert</span>
           </li>
           <li>
+            <span class="skill-name">Microsoft Office</span>
+            <span class="skill-level expert">Expert</span>
+          </li>
+          <li>
+            <span class="skill-name">Figma</span>
+            <span class="skill-level expert">Expert</span>
+          </li>
+          <li>
+            <span class="skill-name">Overleaf</span>
+            <span class="skill-level expert">Expert</span>
+          </li>
+          <li>
             <span class="skill-name">Flutter</span>
             <span class="skill-level advanced">Advanced</span>
           </li>
           <li>
             <span class="skill-name">Android Studio</span>
+            <span class="skill-level advanced">Advanced</span>
+          </li>
+          <li>
+            <span class="skill-name">Miro</span>
             <span class="skill-level advanced">Advanced</span>
           </li>
           <li>
@@ -258,7 +267,7 @@
                 <span class="course-pill">Computer Architecture I</span>
                 <span class="course-pill">Data Structures</span>
                 <span class="course-pill">Software Design & Analysis</span>
-                <span class="course-pill">Software Systems Development and Integration</span>
+                <span class="course-pill">Software Systems Development & Integration</span>
                 <span class="course-pill">Computational Science I</span>
                 <span class="course-pill">Scientific Data Analysis</span>
               </div>
@@ -305,27 +314,26 @@
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-image">
-            <div class="image-placeholder"></div>
+            <div class="image-placeholder">
+              <img src="images/MYVoice.jpg" alt="MY Voice Canada Mobile App">
+            </div>
           </div>
           <div class="project-content">
-            <h3>MY Voice Canada Official App</h3>
-            <p class="project-tech">Flutter | Dart | Figma | GitHub</p>
-            <p class="project-description">Designed and developed an Android app for Muslim youth media organization. Collaborated in a 10-person team to create an engaging platform for youth content and community building.</p>
+            <h3>MY Voice Canada Mobile App</h3>
+            <p class="project-tech">Flutter | Dart | Figma | Android Studio | Miro | VS Code | MS Office</p>
+            <p class="project-description">Designed and developed an Android app for a Muslim youth media organization. Collaborated in a 10-person team to create an engaging platform for youth content and community building.</p>
             <div class="project-features">
               <h4>Key Features:</h4>
               <ul>
                 <li>User authentication system</li>
                 <li>Content management dashboard</li>
                 <li>Interactive community features</li>
-                <li>Responsive UI design</li>
+                <li>Responsive UI/UX design</li>
               </ul>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Rayan-Alam-UOIT" target="_blank" class="btn btn-small">
+              <a href="https://github.com/Rayan-Alam-UOIT/MY-Voice-Canada-Mobile-App.git" target="_blank" class="btn btn-small">
                 <i class="fab fa-github"></i> View Code
-              </a>
-              <a href="#" class="btn btn-small btn-secondary">
-                <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
             </div>
           </div>
@@ -333,19 +341,139 @@
         
         <div class="project-card">
           <div class="project-image">
-            <div class="image-placeholder"></div>
+            <div class="image-placeholder">
+              <img src="images/Rain.jpg" alt="Scientific Data Analysis Project">
+            </div>
           </div>
           <div class="project-content">
-            <h3>Student Management System</h3>
-            <p class="project-tech">Java | MySQL | Swing</p>
-            <p class="project-description">A desktop application for managing student records, courses, and grades with a user-friendly interface and secure database integration.</p>
+            <h3>Scientific Data Analysis Project</h3>
+            <p class="project-tech">Python | NumPy | Pandas | Seaborn | Matplotlib | Jupyterlab | VS Code</p>
+            <p class="project-description">Developed an end-to-end data workflow in Python on the rainfall crisis in Pakistan, to uncover patterns, trends, and insights that could support better understanding and potential solutions to the situation.</p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Automated data cleaning</li>
+                <li>Exploratory data analysis</li>
+                <li>Insightful data visualizations</li>
+                <li>Scientific report formatting</li>
+              </ul>
+            </div>
             <div class="project-links">
-              <a href="#" class="btn btn-small">
+              <a href="https://github.com/Rayan-Alam-UOIT/Scientific-Data-Analysis-Project.git" target="_blank" class="btn btn-small">
                 <i class="fab fa-github"></i> View Code
               </a>
             </div>
           </div>
         </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="image-placeholder">
+              <img src="images/Quiz.jpg" alt="Trivia Quiz Game">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Multiplayer Trivia Quiz Game</h3>
+            <p class="project-tech">Java Swing | Java | Git | IntelliJ IDEA</p>
+            <p class="project-description">Designed and developed a real-time multiplayer trivia quiz game called "Those Who Know" that supports multiple concurrent players, enabling interactive and synchronized gameplay across clients.</p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Server-client architecture</li>
+                <li>Dynamic question pool</li>
+                <li>Real-time game state</li>
+                <li>Multithreaded server handling</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayan-Alam-UOIT/Multiplayer-Trivia-Quiz-Game.git" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="image-placeholder">
+              <img src="images/Spam.jpg" alt="Spam Detector Algorithm">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Spam Detector Algorithm</h3>
+            <p class="project-tech">Java Swing | Java | Git | Maven | IntelliJ IDEA</p>
+            <p class="project-description">Designed and developed a spam detection algorithm that leverages advanced conditional word probabilities to accurately classify and filter different types of emails.</p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Interactive start screen</li>
+                <li>Enhanced performance metrics</li>
+                <li>Visual data insights</li>
+                <li>Improved spam classification</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayan-Alam-UOIT/Spam-Detector-Algorithm.git" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="image-placeholder">
+              <img src="images/File.jpg" alt="File Sharer Application">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>File Sharer Application</h3>
+            <p class="project-tech">Java Swing | Java | Git | Maven | IntelliJ IDEA</p>
+            <p class="project-description">Designed and developed a real-time, multi-threaded file sharing system enabling client-server interactions through a variety of commands for a smooth user experience.</p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Secure File Operations</li>
+                <li>Integrated Search Functionality</li>
+                <li>Real-Time File Interaction</li>
+                <li>Cross-Platform Compatibility</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayan-Alam-UOIT/File-Sharer-Application.git" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="image-placeholder">
+              <img src="images/Clothes.jpg" alt="Fashion and Clothing Catalogue">
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Fashion and Clothing Catalogue</h3>
+            <p class="project-tech">Java Swing | Java | SQL | JUnit | Git | Maven | IntelliJ IDEA | MS Office</p>
+            <p class="project-description">Designed and developed a visually engaging fashion catalogue for seamless clothing storage and an endless browsing experience between administrators and users alike.</p>
+            <div class="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>SQL-backed data handling</li>
+                <li>Role-based authentication</li>
+                <li>Favorites management system</li>
+                <li>Advanced search filters</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rayan-Alam-UOIT/Fashion-and-Clothing-Catalogue.git" target="_blank" class="btn btn-small">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -353,80 +481,209 @@
   <section id="experience" class="section experience">
     <div class="container">
       <h2 class="section-title">Work Experience</h2>
-      <div class="timeline">
+      <div class="timeline-container">
+  
         <div class="timeline-item">
-          <div class="timeline-date">2022 - Present</div>
+          <div class="timeline-dot">
+            <div class="dot"></div>
+            <div class="timeline-line"></div>
+          </div>
           <div class="timeline-content">
-            <h3>Avis Budget Group</h3>
-            <p class="position">Car Washer</p>
-            <ul class="responsibilities">
-              <li>Managed and cleaned 5-10 vehicles per shift with meticulous attention to detail</li>
-              <li>Identified and reported maintenance issues, ensuring vehicle safety</li>
-              <li>Developed efficient time management and customer service skills</li>
-            </ul>
+            <div class="timeline-date">2021 - Present</div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <i class="fas fa-briefcase"></i>
+                <h3>Avis Budget Group</h3>
+              </div>
+              <p class="position">Car Washer</p>
+              <div class="responsibilities">
+                <h4><i class="fas fa-tasks"></i> Responsibilities:</h4>
+                <ul class="activity-list">
+                  <li><i class="fas fa-check-circle"></i> Proficiently serviced 5-10 vehicles per shift, including sedans and SUVs, ensuring thorough exterior and interior cleaning</li>
+                  <li><i class="fas fa-check-circle"></i> Maintained a consistent cleaning pace of 15-20 minutes per vehicle, contributing to customer satisfaction and improved rental turnover</li>
+                  <li><i class="fas fa-check-circle"></i> Identified and resolved basic maintenance issues such as low tire pressure and fluid levels to ensure vehicle readiness</li>
+                  <li><i class="fas fa-check-circle"></i> Organized and restocked cleaning supplies and inventory, reducing downtime and enhancing team productivity</li>
+                  <li><i class="fas fa-check-circle"></i> Actively responded to customer feedback and adapted cleaning practices to ensure a safe and comfortable rental experience</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+  
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 - 2023</div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <i class="fas fa-laptop-code"></i>
+                <h3>MY Voice Canada</h3>
+              </div>
+              <p class="position">UI Designer & Mobile App Developer</p>
+              <div class="responsibilities">
+                <h4><i class="fas fa-tasks"></i> Responsibilities:</h4>
+                <ul class="activity-list">
+                  <li><i class="fas fa-check-circle"></i> Collaborated with a team of 10 students to develop a mobile Android app promoting youth-generated Muslim media, including magazines, articles, and videos</li>
+                  <li><i class="fas fa-check-circle"></i> Led the UI design using Figma and Miro, creating accessible, user-friendly layouts with a focus on visual appeal and seamless navigation</li>
+                  <li><i class="fas fa-check-circle"></i> Developed core app components in Dart using Flutter within Visual Studio Code and resolved functional issues using Android Studio</li>
+                  <li><i class="fas fa-check-circle"></i> Conducted weekly prototype reviews, integrating user feedback and team insights to improve performance and user experience</li>
+                  <li><i class="fas fa-check-circle"></i> Managed development tasks and team coordination through Microsoft Office 365 and version control using GitHub</li>
+                  <li><i class="fas fa-check-circle"></i> Ensured app optimization throughout the development lifecycle, culminating in a successful deployment to the Google Play Store</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
 
-  <section class="section volunteering">
-    <div class="container">
-      <h2 class="section-title">Volunteer Experience</h2>
-      <div class="volunteer-grid">
-        <div class="volunteer-card">
-          <h3>Summer Camp Counsellor</h3>
-          <p class="organization">Calvary Baptist Church</p>
-          <ul>
-            <li>Planned and led group activities for 20+ children</li>
-            <li>Fostered a safe and inclusive environment</li>
-            <li>Facilitated discussions promoting teamwork and personal growth</li>
-          </ul>
-        </div>
-        
-        <div class="volunteer-card">
-          <h3>Tech Mentor</h3>
-          <p class="organization">MY Voice Canada</p>
-          <ul>
-            <li>Guided youth in basic programming concepts</li>
-            <li>Assisted with digital media projects</li>
-            <li>Helped organize tech workshops</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Updated Volunteer Experience Section -->
+<section class="section volunteering">
+  <div class="container">
+    <h2 class="section-title">Volunteer Experience</h2>
+    <div class="timeline-container">
 
-  <section id="awards" class="section awards">
-    <div class="container">
-      <h2 class="section-title">Awards & Certifications</h2>
-      <div class="awards-grid">
-        <div class="award-card">
+    
+        <div class="timeline-content">
+          <div class="timeline-date">Summer 2019</div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <i class="fas fa-hands-helping"></i>
+              <h3>Summer Camp Counsellor</h3>
+            </div>
+            <p class="organization">Calvary Baptist Church</p>
+            <div class="responsibilities">
+              <h4><i class="fas fa-tasks"></i> Responsibilities:</h4>
+              <ul class="activity-list">
+                <li><i class="fas fa-check-circle"></i> Created a safe and welcoming environment for campers, managing unexpected situations with professionalism and care</li>
+                <li><i class="fas fa-check-circle"></i> Designed and facilitated educational activities that promoted creativity, teamwork, and spiritual growth in a supportive setting</li>
+                <li><i class="fas fa-check-circle"></i> Led group discussions that encouraged campers to share experiences and build a sense of community</li>
+                <li><i class="fas fa-check-circle"></i> Maintained clear communication with fellow staff and parents to ensure smooth execution of daily camp programs</li>
+                <li><i class="fas fa-check-circle"></i> Completed over 80 hours of volunteer service, exceeding provincial graduation requirements by  double the amount</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+      
+
+    </div>
+  </div>
+</section>
+
+<section id="awards" class="section awards">
+  <div class="container">
+    <h2 class="section-title">Awards & Certifications</h2>
+    <div class="awards-grid">
+      
+      <!-- President's Honours List -->
+      <div class="award-card">
+        <div class="award-icon">
           <i class="fas fa-trophy"></i>
+        </div>
+        <div class="award-content">
           <h3>President's Honours List</h3>
-          <p>Ontario Tech University (3x)</p>
-        </div>
-        
-        <div class="award-card">
-          <i class="fas fa-certificate"></i>
-          <h3>DELF A2 Certificate</h3>
-          <p>French Language Proficiency</p>
-        </div>
-        
-        <div class="award-card">
-          <i class="fas fa-code"></i>
-          <h3>HackerRank SQL</h3>
-          <p>Basic & Advanced Certification</p>
-        </div>
-        
-        <div class="award-card">
-          <i class="fas fa-users"></i>
-          <h3>Best Team of 2022</h3>
-          <p>MY Voice Canada</p>
+          <p class="award-org">Ontario Tech University</p>
+          <p class="award-date">2022, 2023, 2024</p>
+          <div class="award-badge">Academic Excellence</div>
+          <p class="award-desc">Awarded for maintaining a GPA above 3.7 for three consecutive years</p>
         </div>
       </div>
+      
+      <!-- Ontario Tech Scholarship 1 -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="award-content">
+          <h3>Ontario Tech Course Scholarship</h3>
+          <p class="award-org">Ontario Tech University</p>
+          <p class="award-date">2023</p>
+          <div class="award-badge">Merit-Based</div>
+          <p class="award-desc">Awarded for outstanding academic performance in Computer Science coursework</p>
+        </div>
+      </div>
+      
+      <!-- Ontario Tech Scholarship 2 (NEW) -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-medal"></i>
+        </div>
+        <div class="award-content">
+          <h3>Dean's Scholarship for STEM</h3>
+          <p class="award-org">Ontario Tech University</p>
+          <p class="award-date">2022</p>
+          <div class="award-badge">Academic Achievement</div>
+          <p class="award-desc">Recognized for exceptional performance in Science, Technology, Engineering, and Mathematics</p>
+        </div>
+      </div>
+      
+      <!-- DELF Certificate -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <div class="award-content">
+          <h3>DELF A2 Certificate</h3>
+          <p class="award-org">French Ministry of Education</p>
+          <p class="award-date">2021</p>
+          <div class="award-badge">Language Proficiency</div>
+          <p class="award-desc">Official certification of intermediate French language skills</p>
+        </div>
+      </div>
+      
+      <!-- HackerRank Certification -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="award-content">
+          <h3>HackerRank SQL Certification</h3>
+          <p class="award-org">HackerRank</p>
+          <p class="award-date">2023</p>
+          <div class="award-badge">Technical Skills</div>
+          <p class="award-desc">Certified in both Basic and Advanced SQL concepts</p>
+          <a href="#" class="verify-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      
+      <!-- Thousand Coffees Certification -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="award-content">
+          <h3>Professional Networking Certification</h3>
+          <p class="award-org">Thousand Coffees</p>
+          <p class="award-date">2023</p>
+          <div class="award-badge">Career Development</div>
+          <p class="award-desc">Certified in professional networking strategies and relationship building</p>
+          <a href="#" class="verify-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+      
+      <!-- Best Team Award -->
+      <div class="award-card">
+        <div class="award-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="award-content">
+          <h3>Best Team of 2022</h3>
+          <p class="award-org">MY Voice Canada</p>
+          <p class="award-date">2022</p>
+          <div class="award-badge">Team Achievement</div>
+          <p class="award-desc">Recognized for outstanding collaboration on the MY Voice mobile app project</p>
+        </div>
+      </div>
+      
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="contact" class="section contact">
     <div class="container">
@@ -447,28 +704,45 @@
               <span>github.com/Rayan-Alam-UOIT</span>
             </a>
             
-            <a href="#" target="_blank" class="contact-item">
+            <a href="https://www.linkedin.com/in/rayan-alam/" target="_blank" class="contact-item">
               <i class="fab fa-linkedin"></i>
               <span>linkedin.com/in/rayan-alam</span>
             </a>
           </div>
+       
+
+         <!-- Download Resume Button - Added outside contact-methods -->
+        <a href="files/Rayan Alam Resume.pdf" target="_blank"  download class="download-resume-btn">
+          <i class="fas fa-file-download"></i> Download My Resume
+        </a>
+      </div>
+        
+      <form id="contactForm" action="https://formsubmit.co/alamrayan103@gmail.com" method="POST" class="contact-form">
+        <!-- FormSubmit required fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         </div>
         
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <!-- reCAPTCHA v2 Checkbox -->
+        <div class="form-group">
+          <div class="g-recaptcha" data-sitekey="6LerESsrAAAAAPTytM3ViPZItDZ4Dt29Oc32nANV"></div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
       </div>
     </div>
   </section>
@@ -478,7 +752,9 @@
       <div class="footer-content">
         <div class="footer-logo">
           <a href="#">Rayan Alam</a>
-          <p>Computer Science Student & Developer</p>
+          <p>Computer Science Student</p>
+          <p>Software Developer</p>
+          <p>UI/UX Designer</p>
         </div>
         
         <div class="footer-links">
@@ -497,7 +773,7 @@
           <div class="social-icons">
             <a href="mailto:alamrayan103@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/Rayan-Alam-UOIT" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/rayan-alam/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>

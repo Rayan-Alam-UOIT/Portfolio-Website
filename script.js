@@ -60,16 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Form submission handling
-  const contactForm = document.querySelector('.contact-form');
+  // Enhanced form submission with reCAPTCHA verification
+  const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Here you would typically send the form data to a server
-      alert('Thank you for your message! I will get back to you soon.');
-      contactForm.reset();
+    contactForm.addEventListener('submit', function(e) {
+      // Verify reCAPTCHA
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        e.preventDefault();
+        alert('Please complete the reCAPTCHA verification');
+        return false;
+      }
+      
+      // Add reCAPTCHA response to form data
+      const recaptchaInput = document.createElement('input');
+      recaptchaInput.type = 'hidden';
+      recaptchaInput.name = 'g-recaptcha-response';
+      recaptchaInput.value = recaptchaResponse;
+      this.appendChild(recaptchaInput);
+      
+      // Change button state
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      
+      return true;
     });
-  }
+}
 
   // Project card hover effect enhancement
   const projectCards = document.querySelectorAll('.project-card');
@@ -102,6 +119,55 @@ document.addEventListener('DOMContentLoaded', () => {
    // Start the slideshow
    if (slides.length > 0) {
      showSlide(0);
-     setInterval(nextSlide, 2500); // Change slide every 3 seconds
+     setInterval(nextSlide, 3000); // Change slide every 3 seconds
    }
+
+   // Typewriter Effect
+  const typewriterText = document.getElementById('typewriter-text');
+  const professions = [
+    'Computer Science Student',
+    'Software Developer',
+    'UX/UI Designer',
+    'Aspiring Full-Stack Developer',
+    'Aspiring Data Scientist'
+  ];
+  let professionIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 125; // ms per character
+
+  function typeWriter() {
+    const currentProfession = professions[professionIndex];
+    
+    if (isDeleting) {
+      // Backspace effect
+      typewriterText.textContent = currentProfession.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50; // Faster when deleting
+    } else {
+      // Typing effect
+      typewriterText.textContent = currentProfession.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+
+    // Determine next action
+    if (!isDeleting && charIndex === currentProfession.length) {
+      // Pause at end of word
+      isDeleting = true;
+      typingSpeed = 2000; // Pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next word
+      isDeleting = false;
+      professionIndex = (professionIndex + 1) % professions.length;
+      typingSpeed = 800; // Pause before typing next word
+    }
+
+    setTimeout(typeWriter, typingSpeed);
+  }
+
+  // Start the typewriter effect after a brief delay
+  setTimeout(typeWriter, 500);
+
+  
 });
