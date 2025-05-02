@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page Title -->
   <title>Thank You | Rayan Alam</title>
+  
+  <!-- CSS Links -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Use the same Font Awesome CDN as your main page -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navigation Bar (matches main page) -->
   <nav class="navbar">
-    <!-- Copy the same navbar from your main page -->
     <div class="container">
+      <!-- Logo linking back to home -->
       <a href="index.html" class="logo">Rayan Alam</a>
+      
+      <!-- Navigation Links -->
       <ul class="nav-links">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#skills">Skills</a></li>
@@ -23,27 +31,49 @@
     </div>
   </nav>
 
+  <!-- Main Content Section -->
   <main class="thank-you-section">
     <div class="container">
-        <div class="thank-you-content">
-            <i class="fas fa-check-circle"></i>
-            <h1>Thank You!</h1>
-            <p>Your message has been successfully sent. I'll get back to you soon.</p>
-            <p>You'll be automatically redirected in <span id="countdown">5</span> seconds...</p>
-            <a href="index.html" class="btn btn-primary">Return Home Now</a>
-          </div>
+      <!-- Thank You Content Box -->
+      <div class="thank-you-content">
+        <!-- Checkmark icon -->
+        <i class="fas fa-check-circle"></i>
+        
+        <!-- Main heading -->
+        <h1>Thank You!</h1>
+        
+        <!-- Confirmation message -->
+        <p>Your message has been successfully sent. I'll get back to you soon.</p>
+        
+        <!-- Countdown message -->
+        <p>You'll be automatically redirected in <span id="countdown">5</span> seconds...</p>
+        
+        <!-- Manual return button -->
+        <a href="index.html" class="btn btn-primary">Return Home Now</a>
+      </div>
 
-          <script>
-            // Countdown timer for automatic redirect
-            let seconds = 5;
-            const countdown = document.getElementById('countdown');
-            
-            const timer = setInterval(() => {
-              seconds--;
-              countdown.textContent = seconds;
-              if (seconds <= 0) {
-                clearInterval(timer);
-                window.location.href = 'index.html';
-              }
-            }, 1000);
-          </script>
+      <!-- Countdown Timer Script -->
+      <script>
+        // Countdown timer for automatic redirect
+        let seconds = 5; // Initial countdown value
+        const countdown = document.getElementById('countdown'); // Get countdown element
+        
+        // Set up interval timer that runs every second
+        const timer = setInterval(() => {
+          // Decrement seconds
+          seconds--;
+          
+          // Update countdown display
+          countdown.textContent = seconds;
+          
+          // Check if countdown has reached 0
+          if (seconds <= 0) {
+            clearInterval(timer); // Stop the timer
+            window.location.href = 'index.html'; // Redirect to home page
+          }
+        }, 1000); // Run every 1000ms (1 second)
+      </script>
+    </div>
+  </main>
+</body>
+</html>

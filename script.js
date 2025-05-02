@@ -1,8 +1,12 @@
-// JavaScript for enhanced interactivity
+// Enhanced Portfolio Interactivity
 document.addEventListener('DOMContentLoaded', () => {
-  // Navbar scroll effect
+  // =============================================
+  // ========== NAVBAR SCROLL EFFECT ============
+  // =============================================
   const navbar = document.querySelector('.navbar');
+  
   window.addEventListener('scroll', () => {
+    // Add/remove scrolled class based on scroll position
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
@@ -10,9 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile menu toggle
+  // =============================================
+  // ========== MOBILE MENU TOGGLE ==============
+  // =============================================
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
+  
+  // Toggle mobile menu on hamburger click
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
@@ -26,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth scrolling for anchor links
+  // =============================================
+  // ========== SMOOTH SCROLLING ================
+  // =============================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -34,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
+        // Smooth scroll to target with navbar height offset
         window.scrollTo({
           top: targetElement.offsetTop - 70,
           behavior: 'smooth'
@@ -42,8 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Intersection Observer for scroll animations
+  // =============================================
+  // ======== SCROLL REVEAL ANIMATIONS ==========
+  // =============================================
   const sections = document.querySelectorAll('.section, .hero, .footer');
+  
+  // Configure Intersection Observer
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -51,23 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { 
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.1, // Trigger when 10% of element is visible
+    rootMargin: '0px 0px -100px 0px' // Adjust trigger point
   });
 
+  // Apply observer to all sections
   sections.forEach(section => {
     section.classList.add('hidden');
     observer.observe(section);
   });
 
+  // =============================================
+  // ========== CONTACT FORM VALIDATION =========
+  // =============================================
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  // Form validation
+  // Form submission handler
   form.addEventListener('submit', function(e) {
     let isValid = true;
     
-    // Validate name
+    // Validate name field
     const nameInput = document.getElementById('name');
     if (nameInput.value.length < 3) {
       nameInput.parentElement.classList.add('invalid');
@@ -77,9 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nameInput.parentElement.classList.remove('invalid');
     }
     
-    // Validate email
+    // Validate email field
     const emailInput = document.getElementById('email');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
       emailInput.parentElement.classList.add('invalid');
       emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
       isValid = false;
@@ -87,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emailInput.parentElement.classList.remove('invalid');
     }
     
-    // Validate message
+    // Validate message field
     const messageInput = document.getElementById('message');
     if (messageInput.value.length < 10) {
       messageInput.parentElement.classList.add('invalid');
@@ -97,12 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
       messageInput.parentElement.classList.remove('invalid');
     }
     
+    // Prevent submission if invalid
     if (!isValid) {
       e.preventDefault();
       return;
     }
     
-    // Show loading spinner
+    // Show loading state during submission
     const submitBtn = document.getElementById('submitBtn');
     const submitText = submitBtn.querySelector('.submit-text');
     const spinner = submitBtn.querySelector('.spinner');
@@ -112,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.disabled = true;
   });
 
-  // Real-time validation
+  // Real-time input validation
   form.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener('input', () => {
       if (input.checkValidity()) {
@@ -121,9 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Project card hover effect enhancement
+  // =============================================
+  // ======== PROJECT CARD INTERACTIONS =========
+  // =============================================
   const projectCards = document.querySelectorAll('.project-card');
+  
   projectCards.forEach(card => {
+    // Enhanced hover effects
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-10px)';
       card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
@@ -135,27 +160,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-   // Slideshow functionality
-   const slides = document.querySelectorAll('.slide');
-   let currentSlide = 0;
-   
-   function showSlide(index) {
-     slides.forEach(slide => slide.classList.remove('active'));
-     slides[index].classList.add('active');
-   }
-   
-   function nextSlide() {
-     currentSlide = (currentSlide + 1) % slides.length;
-     showSlide(currentSlide);
-   }
-   
-   // Start the slideshow
-   if (slides.length > 0) {
-     showSlide(0);
-     setInterval(nextSlide, 3000); // Change slide every 3 seconds
-   }
+  // =============================================
+  // ============ SLIDESHOW FUNCTION ============
+  // =============================================
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  
+  function showSlide(index) {
+    // Hide all slides and show current one
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+  
+  function nextSlide() {
+    // Move to next slide (loop back to 0 at end)
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+  
+  // Initialize slideshow if slides exist
+  if (slides.length > 0) {
+    showSlide(0);
+    setInterval(nextSlide, 3000); // Auto-advance every 3 seconds
+  }
 
-   // Typewriter Effect
+  // =============================================
+  // ========== TYPEWRITER EFFECT ===============
+  // =============================================
   const typewriterText = document.getElementById('typewriter-text');
   const professions = [
     'Computer Science Student',
@@ -164,10 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
     'Aspiring Full-Stack Developer',
     'Aspiring Data Scientist'
   ];
+  
   let professionIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let typingSpeed = 125; // ms per character
+  let typingSpeed = 125; // Base typing speed in ms
 
   function typeWriter() {
     const currentProfession = professions[professionIndex];
@@ -181,26 +213,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // Typing effect
       typewriterText.textContent = currentProfession.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 100;
+      typingSpeed = 100; // Normal typing speed
     }
 
     // Determine next action
     if (!isDeleting && charIndex === currentProfession.length) {
-      // Pause at end of word
+      // Pause at end of word before deleting
       isDeleting = true;
-      typingSpeed = 2000; // Pause before deleting
+      typingSpeed = 2000; // Longer pause
     } else if (isDeleting && charIndex === 0) {
-      // Move to next word
+      // Move to next word after deleting
       isDeleting = false;
       professionIndex = (professionIndex + 1) % professions.length;
       typingSpeed = 800; // Pause before typing next word
     }
 
+    // Continue the effect
     setTimeout(typeWriter, typingSpeed);
   }
 
-  // Start the typewriter effect after a brief delay
+  // Start the typewriter effect after initial delay
   setTimeout(typeWriter, 500);
-
-  
 });

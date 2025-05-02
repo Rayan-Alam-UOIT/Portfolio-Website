@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rayan Alam Portfolio</title>
+  
+  <!-- External CSS Links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- JavaScript -->
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="container">
       <a href="#" class="logo">Rayan Alam</a>
+      
+      <!-- Desktop Navigation Links -->
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -19,6 +27,8 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      
+      <!-- Mobile Hamburger Menu -->
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -27,11 +37,12 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <div class="container">
       <div class="hero-content">
         <h1>Rayan Alam</h1>
-        <h2 id="typewriter-text"></h2>
+        <h2 id="typewriter-text"></h2> <!-- Typewriter effect will be inserted here -->
         <p>Building innovative solutions at Ontario Tech University</p>
         <div class="cta-buttons">
           <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -44,6 +55,7 @@
     </div>
   </header>
 
+  <!-- About Me Section -->
   <section id="about" class="section about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -52,6 +64,8 @@
           <p>I'm a highly ambitious and hard-working computer science student at Ontario Tech University, having recently finished my second year with a cumulative GPA of 4.10 out of 4.30. I plan to specialize in Data Science and pursue a minor in Mathematics or Physics. I'm passionate about creating impactful software solutions and currently seeking co-op opportunities to apply my skills in real-world scenarios.</p>
           <p>A bit about my background — I was born and raised in Ontario, Canada, while my parents are originally from Pakistan, with roots that trace across South Asia and the Middle East. In my free time, I enjoy playing and watching sports, especially basketball, soccer, and badminton. I'm also an anime fan, with Vinland Saga and Bleach being two of my favourites. Occasionally, I like to unwind by playing video games on my Xbox.</p>
           <p>When I'm not coding, you can find me contributing to open-source projects, learning new technologies, and getting involved in university clubs and events including the MSA, PSA, CS Club, and HackHive hackathons.</p>
+          
+          <!-- Stats Grid -->
           <div class="stats">
             <div class="stat-item">
               <span class="stat-number">3rd</span>
@@ -65,13 +79,14 @@
               <span class="stat-number">3x</span>
               <span class="stat-label">President's Honours List</span>
             </div>
-            
             <div class="stat-item">
               <span class="stat-number">2027</span>
               <span class="stat-label">Graduation Year</span>
             </div>
           </div>
         </div>
+        
+        <!-- Image Slideshow -->
         <div class="about-image">
           <div class="slideshow-container">
             <div class="slide active">
@@ -104,210 +119,220 @@
     </div>
   </section>
 
- <!-- Updated Skills Section without Progress Bars -->
-<section id="skills" class="section skills">
-  <div class="container">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3><i class="fas fa-code"></i> Programming Languages</h3>
-        <ul class="skill-list">
-          <li>
-            <span class="skill-name">Python</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Java</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">C/C++</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">LaTeX</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Dart</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">HTML</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">CSS</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">SQL</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">JavaScript</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-          <li>
-            <span class="skill-name">x86-64 Assembly</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="skill-category">
-        <h3><i class="fas fa-mobile-alt"></i> Development Tools</h3>
-        <ul class="skill-list">
-          <li>
-            <span class="skill-name">Git/GitHub</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Visual Studio Code</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">IntelliJ IDEA</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Microsoft Office</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Figma</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Overleaf</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">Flutter</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">Android Studio</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">Miro</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">Anaconda</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">JupyterLab</span>
-            <span class="skill-level advanced">Advanced</span>
-          </li>
-          <li>
-            <span class="skill-name">Linux</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-          <li>
-            <span class="skill-name">MATLAB</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="skill-category">
-        <h3><i class="fas fa-language"></i> Languages</h3>
-        <ul class="skill-list">
-          <li>
-            <span class="skill-name">English</span>
-            <span class="skill-level expert">Expert</span>
-          </li>
-          <li>
-            <span class="skill-name">French</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-          <li>
-            <span class="skill-name">Urdu</span>
-            <span class="skill-level intermediate">Intermediate</span>
-          </li>
-        </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Programming Languages</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">Python</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Java</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">C/C++</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">LaTeX</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Dart</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">HTML</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">CSS</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">SQL</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+            <li>
+              <span class="skill-name">x86-64 Assembly</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Development Tools -->
+        <div class="skill-category">
+          <h3><i class="fas fa-mobile-alt"></i> Development Tools</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">Git/GitHub</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Visual Studio Code</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">IntelliJ IDEA</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Microsoft Office</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Figma</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Overleaf</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">Flutter</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">Android Studio</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">Miro</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">Anaconda</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">JupyterLab</span>
+              <span class="skill-level advanced">Advanced</span>
+            </li>
+            <li>
+              <span class="skill-name">Linux</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+            <li>
+              <span class="skill-name">MATLAB</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Languages -->
+        <div class="skill-category">
+          <h3><i class="fas fa-language"></i> Languages</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-name">English</span>
+              <span class="skill-level expert">Expert</span>
+            </li>
+            <li>
+              <span class="skill-name">French</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+            <li>
+              <span class="skill-name">Urdu</span>
+              <span class="skill-level intermediate">Intermediate</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Updated Education Section -->
-<section id="education" class="section education">
-  <div class="container">
-    <h2 class="section-title">Education</h2>
-    <div class="timeline-container">
-      <div class="timeline-item">
-        <div class="timeline-dot">
-          <div class="dot"></div>
-          <div class="timeline-line"></div>
+  <!-- Education Section -->
+  <section id="education" class="section education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline-container">
+        
+        <!-- University Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - 2027</div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Ontario Tech University</h3>
+              </div>
+              <p class="degree">Bachelor of Science - BSc (Hons), Comprehensive Computer Science Co-op</p>
+              <div class="gpa-badge">
+                <i class="fas fa-star"></i> Cumulative GPA: 4.10/4.30
+              </div>
+              <div class="courses">
+                <h4><i class="fas fa-book-open"></i> Relevant Coursework:</h4>
+                <div class="course-grid">
+                  <span class="course-pill">Introduction to Computer Science</span>
+                  <span class="course-pill">Programming Workshop I & II</span>
+                  <span class="course-pill">Computer Architecture I</span>
+                  <span class="course-pill">Data Structures</span>
+                  <span class="course-pill">Software Design & Analysis</span>
+                  <span class="course-pill">Software Systems Development & Integration</span>
+                  <span class="course-pill">Computational Science I</span>
+                  <span class="course-pill">Scientific Data Analysis</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="timeline-content">
-          <div class="timeline-date">2023 - 2027</div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <i class="fas fa-graduation-cap"></i>
-              <h3>Ontario Tech University</h3>
-            </div>
-            <p class="degree">Bachelor of Science - BSc (Hons), Comprehensive Computer Science Co-op</p>
-            <div class="gpa-badge">
-              <i class="fas fa-star"></i> Cumulative GPA: 4.10/4.30
-            </div>
-            <div class="courses">
-              <h4><i class="fas fa-book-open"></i> Relevant Coursework:</h4>
-              <div class="course-grid">
-                <span class="course-pill">Introduction to Computer Science</span>
-                <span class="course-pill">Programming Workshop I & II</span>
-                <span class="course-pill">Computer Architecture I</span>
-                <span class="course-pill">Data Structures</span>
-                <span class="course-pill">Software Design & Analysis</span>
-                <span class="course-pill">Software Systems Development & Integration</span>
-                <span class="course-pill">Computational Science I</span>
-                <span class="course-pill">Scientific Data Analysis</span>
+        
+        <!-- High School Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot">
+            <div class="dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019 - 2023</div>
+            <div class="timeline-card">
+              <div class="card-header">
+                <i class="fas fa-school"></i>
+                <h3>Father Leo J. Austin Secondary School</h3>
+              </div>
+              <p class="degree">Ontario Secondary School Diploma (OSSD)</p>
+              <div class="gpa-badge">
+                <i class="fas fa-star"></i> Cumulative Average: 91%
+              </div>
+              <div class="activities">
+                <h4><i class="fas fa-users"></i> Activities and Societies:</h4>
+                <ul class="activity-list">
+                  <li><i class="fas fa-chalkboard-teacher"></i> Co-founder of Tutoring Club</li>
+                  <li><i class="fas fa-table-tennis"></i> Member of Badminton Club</li>
+                  <li><i class="fas fa-chess"></i> Member of Chess Club</li>
+                  <li><i class="fas fa-dumbbell"></i> Member of Weightlifting Club</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-dot">
-          <div class="dot"></div>
-          <div class="timeline-line"></div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-date">2019 - 2023</div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <i class="fas fa-school"></i>
-              <h3>Father Leo J. Austin Secondary School</h3>
-            </div>
-            <p class="degree">Ontario Secondary School Diploma (OSSD)</p>
-            <div class="gpa-badge">
-              <i class="fas fa-star"></i> Cumulative Average: 91%
-            </div>
-            <div class="activities">
-              <h4><i class="fas fa-users"></i> Activities and Societies:</h4>
-              <ul class="activity-list">
-                <li><i class="fas fa-chalkboard-teacher"></i> Co-founder of Tutoring Club</li>
-                <li><i class="fas fa-table-tennis"></i> Member of Badminton Club</li>
-                <li><i class="fas fa-chess"></i> Member of Chess Club</li>
-                <li><i class="fas fa-dumbbell"></i> Member of Weightlifting Club</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="section projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
+        
+        <!-- MY Voice Canada Mobile App -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -335,6 +360,7 @@
           </div>
         </div>
         
+        <!-- Scientific Data Analysis Project -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -362,6 +388,7 @@
           </div>
         </div>
 
+        <!-- Multiplayer Trivia Quiz Game -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -389,6 +416,7 @@
           </div>
         </div>
 
+        <!-- Spam Detector Algorithm -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -416,6 +444,7 @@
           </div>
         </div>
 
+        <!-- File Sharer Application -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -443,6 +472,7 @@
           </div>
         </div>
 
+        <!-- Fashion and Clothing Catalogue -->
         <div class="project-card">
           <div class="project-image">
             <div class="image-placeholder">
@@ -469,16 +499,17 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
+  <!-- Work Experience Section -->
   <section id="experience" class="section experience">
     <div class="container">
       <h2 class="section-title">Work Experience</h2>
       <div class="timeline-container">
   
+        <!-- Avis Budget Group Experience -->
         <div class="timeline-item">
           <div class="timeline-dot">
             <div class="dot"></div>
@@ -506,6 +537,7 @@
           </div>
         </div>
   
+        <!-- MY Voice Canada Experience -->
         <div class="timeline-item">
           <div class="timeline-dot">
             <div class="dot"></div>
@@ -533,18 +565,15 @@
             </div>
           </div>
         </div>
-  
       </div>
     </div>
   </section>
 
-<!-- Updated Volunteer Experience Section -->
-<section class="section volunteering">
-  <div class="container">
-    <h2 class="section-title">Volunteer Experience</h2>
-    <div class="timeline-container">
-
-    
+  <!-- Volunteer Experience Section -->
+  <section class="section volunteering">
+    <div class="container">
+      <h2 class="section-title">Volunteer Experience</h2>
+      <div class="timeline-container">
         <div class="timeline-content">
           <div class="timeline-date">Summer 2019</div>
           <div class="timeline-card">
@@ -560,125 +589,123 @@
                 <li><i class="fas fa-check-circle"></i> Designed and facilitated educational activities that promoted creativity, teamwork, and spiritual growth in a supportive setting</li>
                 <li><i class="fas fa-check-circle"></i> Led group discussions that encouraged campers to share experiences and build a sense of community</li>
                 <li><i class="fas fa-check-circle"></i> Maintained clear communication with fellow staff and parents to ensure smooth execution of daily camp programs</li>
-                <li><i class="fas fa-check-circle"></i> Completed over 80 hours of volunteer service, exceeding provincial graduation requirements by  double the amount</li>
+                <li><i class="fas fa-check-circle"></i> Completed over 80 hours of volunteer service, exceeding provincial graduation requirements by double the amount</li>
               </ul>
             </div>
           </div>
         </div>
-  
-      
-
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="awards" class="section awards">
-  <div class="container">
-    <h2 class="section-title">Awards & Certifications</h2>
-    <div class="awards-grid">
-      
-      <!-- President's Honours List -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-trophy"></i>
+  <!-- Awards Section -->
+  <section id="awards" class="section awards">
+    <div class="container">
+      <h2 class="section-title">Awards & Certifications</h2>
+      <div class="awards-grid">
+        
+        <!-- President's Honours List -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-content">
+            <h3>President's Honours List</h3>
+            <p class="award-org">Ontario Tech University</p>
+            <p class="award-date">Fall 2023, Winter 2024, Fall 2024</p>
+            <div class="award-badge">Academic Achievement</div>
+            <p class="award-desc">Awarded for maintaining a semester GPA of 3.8 or higher on at least 80% of a full course load</p>
+          </div>
         </div>
-        <div class="award-content">
-          <h3>President's Honours List</h3>
-          <p class="award-org">Ontario Tech University</p>
-          <p class="award-date">Fall 2023, Winter 2024, Fall 2024</p>
-          <div class="award-badge">Academic Achievement</div>
-          <p class="award-desc">Awarded for maintaining a semester GPA of 3.8 or higher on at least 80% of a full course load</p>
+        
+        <!-- Ontario Tech Scholarship 1 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="award-content">
+            <h3>Ontario Tech Entrance Scholarship</h3>
+            <p class="award-org">Ontario Tech University</p>
+            <p class="award-date">Fall 2023</p>
+            <div class="award-badge">Academic Achievement</div>
+            <p class="award-desc">Awarded $2000 for maintaining a 90 to 94.9 percent average in the top six 4U/4M courses in Grade 12</p>
+          </div>
+        </div>
+        
+        <!-- Ontario Tech Scholarship 2 -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="award-content">
+            <h3>Ontario Tech In-Course Scholarship</h3>
+            <p class="award-org">Ontario Tech University</p>
+            <p class="award-date">Fall 2023 - Winter 2024</p>
+            <div class="award-badge">Academic Achievement</div>
+            <p class="award-desc">Awarded $1500 for maintaining a combined GPA of 4.0 or higher in fall and winter semesters</p>
+          </div>
+        </div>
+        
+        <!-- DELF Certificate -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="award-content">
+            <h3>DELF A2 Certificate</h3>
+            <p class="award-org">French Ministry of Education</p>
+            <p class="award-date">May 2023</p>
+            <div class="award-badge">Language Proficiency</div>
+            <p class="award-desc">Official certification of intermediate French language competency</p>
+          </div>
+        </div>
+        
+        <!-- HackerRank Certification -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="award-content">
+            <h3>SQL Certificate</h3>
+            <p class="award-org">HackerRank</p>
+            <p class="award-date">January 2025</p>
+            <div class="award-badge">Technical Skills</div>
+            <p class="award-desc">Certified in Basic, Intermediate, and Advanced SQL concepts</p>
+          </div>
+        </div>
+        
+        <!-- Thousand Coffees Certification -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="award-content">
+            <h3>Ten Thousand Coffees Member Certificate</h3>
+            <p class="award-org">Ten Thousand Coffees</p>
+            <p class="award-date">March 2025 - March 2026</p>
+            <div class="award-badge">Networking</div>
+            <p class="award-desc">Certified in professional networking strategies and relationship building</p>
+          </div>
+        </div>
+        
+        <!-- Best Team Award -->
+        <div class="award-card">
+          <div class="award-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="award-content">
+            <h3>Best Team of 2022</h3>
+            <p class="award-org">MY Voice Canada</p>
+            <p class="award-date">September 2022</p>
+            <div class="award-badge">Team Achievement</div>
+            <p class="award-desc">Awarded for outstanding collaboration and dedication on the MY Voice Canada mobile app project</p>
+          </div>
         </div>
       </div>
-      
-      <!-- Ontario Tech Scholarship 1 -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-award"></i>
-        </div>
-        <div class="award-content">
-          <h3>Ontario Tech Entrance Scholarship</h3>
-          <p class="award-org">Ontario Tech University</p>
-          <p class="award-date">Fall 2023</p>
-          <div class="award-badge">Academic Achievement</div>
-          <p class="award-desc">Awarded $2000 for maintaining a 90 to 94.9 average in the top six 4U/4M courses in Grade 12</p>
-        </div>
-      </div>
-      
-      <!-- Ontario Tech Scholarship 2 (NEW) -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-award"></i>
-        </div>
-        <div class="award-content">
-          <h3>Ontario Tech In-Course Scholarship</h3>
-          <p class="award-org">Ontario Tech University</p>
-          <p class="award-date">Fall 2023 - Winter 2024</p>
-          <div class="award-badge">Academic Achievement</div>
-          <p class="award-desc">Awarded $1500 for maintaining a combined GPA of 4.0 or higher in fall and winter semesters</p>
-        </div>
-      </div>
-      
-      <!-- DELF Certificate -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-certificate"></i>
-        </div>
-        <div class="award-content">
-          <h3>DELF A2 Certificate</h3>
-          <p class="award-org">French Ministry of Education</p>
-          <p class="award-date">May 2023</p>
-          <div class="award-badge">Language Proficiency</div>
-          <p class="award-desc">Official certification of intermediate French language competency</p>
-        </div>
-      </div>
-      
-      <!-- HackerRank Certification -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-code"></i>
-        </div>
-        <div class="award-content">
-          <h3>SQL Certificate</h3>
-          <p class="award-org">HackerRank</p>
-          <p class="award-date">January 2025</p>
-          <div class="award-badge">Technical Skills</div>
-          <p class="award-desc">Certified in Basic, Intermediate, and Advanced SQL concepts</p>
-        </div>
-      </div>
-      
-      <!-- Thousand Coffees Certification -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-network-wired"></i>
-        </div>
-        <div class="award-content">
-          <h3>Ten Thousand Coffees Member Certificate</h3>
-          <p class="award-org">Ten Thousand Coffees</p>
-          <p class="award-date">March 2025 - March 2026</p>
-          <div class="award-badge">Networking</div>
-          <p class="award-desc">Certified in professional networking strategies and relationship building</p>
-        </div>
-      </div>
-      
-      <!-- Best Team Award -->
-      <div class="award-card">
-        <div class="award-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <div class="award-content">
-          <h3>Best Team of 2022</h3>
-          <p class="award-org">MY Voice Canada</p>
-          <p class="award-date">September 2022</p>
-          <div class="award-badge">Team Achievement</div>
-          <p class="award-desc">Awarded for outstanding collaboration and dedication on the MY Voice Canada mobile app project</p>
-        </div>
-      </div>
-      
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section contact">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
@@ -687,6 +714,7 @@
           <h3>Let's Connect!</h3>
           <p>I'm currently looking for co-op opportunities and would love to hear about potential positions or collaborations.</p>
           
+          <!-- Contact Methods -->
           <div class="contact-methods">
             <a href="mailto:alamrayan103@gmail.com" class="contact-item">
               <i class="fas fa-envelope"></i>
@@ -707,43 +735,42 @@
               <i class="fas fa-map-marker-alt"></i>
               <span>Whitby, Ontario, Canada</span>
             </a>
-
-            
           </div>
-       
 
-         <!-- Download Resume Button - Added outside contact-methods -->
-        <a href="files/Rayan Alam Resume.pdf" target="_blank"  download class="download-resume-btn">
-          <i class="fas fa-file-download"></i> Download My Resume
-        </a>
-      </div>
+          <!-- Download Resume Button -->
+          <a href="files/Rayan Alam Resume.pdf" target="_blank" download class="download-resume-btn">
+            <i class="fas fa-file-download"></i> Download My Resume
+          </a>
+        </div>
         
-      <form id="contactForm" action="https://formsubmit.co/alamrayan103@gmail.com" method="POST" class="contact-form">
-        <!-- FormSubmit required fields -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://rayan-alam-uoit.github.io/thank-you.html">
-        <input type="hidden" name="_subject" value="New message from your portfolio">
-        
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <input type="text" name="subject" placeholder="Subject">
-        </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
+        <!-- Contact Form -->
+        <form id="contactForm" action="https://formsubmit.co/alamrayan103@gmail.com" method="POST" class="contact-form">
+          <!-- FormSubmit required fields -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://rayan-alam-uoit.github.io/thank-you.html">
+          <input type="hidden" name="_subject" value="New message from your portfolio">
+          
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
 
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -756,6 +783,7 @@
           </div>
         </div>
         
+        <!-- Footer Links -->
         <div class="footer-links">
           <h3>Quick Links</h3>
           <ul>
@@ -767,6 +795,7 @@
           </ul>
         </div>
         
+        <!-- Social Links -->
         <div class="footer-social">
           <h3>Connect With Me</h3>
           <div class="social-icons">
@@ -777,6 +806,7 @@
         </div>
       </div>
       
+      <!-- Copyright -->
       <div class="footer-bottom">
         <p>&copy; 2025 Rayan Alam. All rights reserved.</p>
       </div>
