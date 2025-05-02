@@ -64,21 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-      // Verify reCAPTCHA
-      const recaptchaResponse = grecaptcha.getResponse();
-      if (!recaptchaResponse) {
-        e.preventDefault();
-        alert('Please complete the reCAPTCHA verification');
-        return false;
-      }
-      
-      // Add reCAPTCHA response to form data
-      const recaptchaInput = document.createElement('input');
-      recaptchaInput.type = 'hidden';
-      recaptchaInput.name = 'g-recaptcha-response';
-      recaptchaInput.value = recaptchaResponse;
-      this.appendChild(recaptchaInput);
-      
       // Change button state
       const submitBtn = this.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
