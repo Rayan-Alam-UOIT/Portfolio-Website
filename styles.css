@@ -917,31 +917,13 @@ a:hover {
   flex: 1;
 }
 
-.verify-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-top: auto;
-  transition: all 0.3s ease;
-}
-
-.verify-link:hover {
-  color: var(--secondary);
-}
-
-.verify-link i {
-  font-size: 0.7rem;
-}
 
 /* Different icon colors for variety */
 .award-card:nth-child(1) .award-icon {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
-.award-card:nth-child(2) .award-icon {
+.award-card:nth-child(7) .award-icon {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
 }
 
@@ -1005,6 +987,114 @@ a:hover {
 
 .contact-methods {
   margin-top: 2rem;
+}
+
+/* Thank You Page Styles */
+.thank-you-section {
+  padding: 100px 0;
+  min-height: calc(100vh - 160px); /* Adjust based on your header/footer height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--light); /* Use your existing light color variable */
+}
+
+.thank-you-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-content i {
+  font-size: 4rem;
+  color: var(--success); /* Use your success color variable (green) */
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.thank-you-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary); /* Use your primary color variable */
+  margin-bottom: 1rem;
+}
+
+.thank-you-content p {
+  font-size: 1.1rem;
+  color: var(--gray); /* Use your gray color variable */
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+#countdown {
+  font-weight: bold;
+  color: var(--accent); /* Use your accent color variable */
+}
+
+/* Button styles (should match your existing button styles) */
+.thank-you-content .btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .thank-you-section {
+    padding: 80px 20px;
+  }
+  
+  .thank-you-content {
+    padding: 1.5rem;
+  }
+  
+  .thank-you-content i {
+    font-size: 3rem;
+  }
+  
+  .thank-you-content h1 {
+    font-size: 2rem;
+  }
+  
+  .thank-you-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for checkmark */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.thank-you-content i {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Countdown animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+#countdown {
+  display: inline-block;
+  animation: pulse 1s infinite;
 }
 
 /* Original contact item styles */
