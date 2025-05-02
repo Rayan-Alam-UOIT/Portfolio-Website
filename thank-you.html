@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Rayan Alam</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Use the same Font Awesome CDN as your main page -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Copy the same navbar from your main page -->
+    <div class="container">
+      <a href="index.html" class="logo">Rayan Alam</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="thank-you-section">
+    <div class="container">
+        <div class="thank-you-content">
+            <i class="fas fa-check-circle"></i>
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully sent. I'll get back to you soon.</p>
+            <p>You'll be automatically redirected in <span id="countdown">5</span> seconds...</p>
+            <a href="index.html" class="btn btn-primary">Return Home Now</a>
+          </div>
+
+          <script>
+            // Countdown timer for automatic redirect
+            let seconds = 5;
+            const countdown = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+              seconds--;
+              countdown.textContent = seconds;
+              if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+              }
+            }, 1000);
+          </script>

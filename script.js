@@ -60,49 +60,66 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Enhanced form submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  // Form validation
+  form.addEventListener('submit', function(e) {
+    let isValid = true;
     
-    const formData = new FormData(this);
-    const submitBtn = this.querySelector('button[type="submit"]');
+    // Validate name
+    const nameInput = document.getElementById('name');
+    if (nameInput.value.length < 3) {
+      nameInput.parentElement.classList.add('invalid');
+      nameInput.nextElementSibling.textContent = 'Please enter at least 3 characters';
+      isValid = false;
+    } else {
+      nameInput.parentElement.classList.remove('invalid');
+    }
     
-    // Change button state
+    // Validate email
+    const emailInput = document.getElementById('email');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+      emailInput.parentElement.classList.add('invalid');
+      emailInput.nextElementSibling.textContent = 'Please enter a valid email address';
+      isValid = false;
+    } else {
+      emailInput.parentElement.classList.remove('invalid');
+    }
+    
+    // Validate message
+    const messageInput = document.getElementById('message');
+    if (messageInput.value.length < 10) {
+      messageInput.parentElement.classList.add('invalid');
+      messageInput.nextElementSibling.textContent = 'Please enter at least 10 characters';
+      isValid = false;
+    } else {
+      messageInput.parentElement.classList.remove('invalid');
+    }
+    
+    if (!isValid) {
+      e.preventDefault();
+      return;
+    }
+    
+    // Show loading spinner
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const spinner = submitBtn.querySelector('.spinner');
+    
+    submitText.textContent = 'Sending...';
+    spinner.classList.remove('hidden');
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    
-    // Submit form data
-    fetch(this.action, {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
+  });
+
+  // Real-time validation
+  form.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('input', () => {
+      if (input.checkValidity()) {
+        input.parentElement.classList.remove('invalid');
       }
-    })
-    .then(response => {
-      if (response.ok) {
-        // Show success message
-        const successHTML = `
-          <div class="form-success">
-            <i class="fas fa-check-circle"></i>
-            <h3>Message Sent Successfully!</h3>
-            <p>Thank you for reaching out. I'll get back to you soon.</p>
-          </div>
-        `;
-        contactForm.innerHTML = successHTML;
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    })
-    .catch(error => {
-      submitBtn.innerHTML = 'Send Message';
-      submitBtn.disabled = false;
-      alert('There was a problem sending your message. Please try again or email me directly at alamrayan103@gmail.com');
     });
   });
-}
 
   // Project card hover effect enhancement
   const projectCards = document.querySelectorAll('.project-card');
