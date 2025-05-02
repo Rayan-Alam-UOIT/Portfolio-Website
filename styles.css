@@ -1090,6 +1090,29 @@ a:hover {
   margin-right: 8px;
 }
 
+.form-success {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #10b981;
+}
+
+.form-success i {
+  font-size: 3rem;
+  color: #10b981;
+  margin-bottom: 1rem;
+}
+
+.form-success h3 {
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.form-success p {
+  color: #6b7280;
+}
+
 
 /* Footer */
 .footer {

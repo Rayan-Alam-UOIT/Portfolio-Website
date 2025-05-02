@@ -60,17 +60,48 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Enhanced form submission with reCAPTCHA verification
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      // Change button state
-      const submitBtn = this.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      
-      return true;
+  // Enhanced form submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const submitBtn = this.querySelector('button[type="submit"]');
+    
+    // Change button state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    // Submit form data
+    fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Show success message
+        const successHTML = `
+          <div class="form-success">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          </div>
+        `;
+        contactForm.innerHTML = successHTML;
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .catch(error => {
+      submitBtn.innerHTML = 'Send Message';
+      submitBtn.disabled = false;
+      alert('There was a problem sending your message. Please try again or email me directly at alamrayan103@gmail.com');
     });
+  });
 }
 
   // Project card hover effect enhancement
