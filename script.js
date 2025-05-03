@@ -191,7 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const professions = [
     'Computer Science Student',
     'Software Developer',
-    'UX/UI Designer',
+    'UI Designer',
+    'UX Designer',
     'Aspiring Full-Stack Developer',
     'Aspiring Data Scientist'
   ];
